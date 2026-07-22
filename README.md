@@ -2,6 +2,10 @@
 
 React + TypeScript app powered by [Vite](https://vite.dev/).
 
+**Live site:** [https://prateeksrt.github.io/prateeksrt/](https://prateeksrt.github.io/prateeksrt/)
+
+Pushes to `main` build the app and deploy `dist/` to GitHub Pages via [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml).
+
 ## Prerequisites
 
 - Node.js 20+ (22 recommended)
