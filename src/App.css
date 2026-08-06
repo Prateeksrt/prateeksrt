@@ -19,9 +19,9 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: 72% 38%;
   transform: scale(1.06);
-  animation: hero- ken 18s ease-out forwards;
+  animation: hero-ken 18s ease-out forwards;
 }
 
 .hero__veil {
@@ -145,7 +145,7 @@
   }
 
   .hero__image {
-    object-position: 62% top;
+    object-position: 70% 28%;
   }
 
   .hero__veil {
