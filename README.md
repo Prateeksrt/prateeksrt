@@ -49,6 +49,8 @@ Open the URL shown in the terminal (usually `http://localhost:5173`).
 
 Visual language lives in [`src/theme.css`](src/theme.css). New pages and sections should use those tokens and classes (`.section`, `.prose`, `.display`, `.headline`, `.lede`, `.btn`, `.rise-in`) instead of introducing new colors or type styles.
 
+Cursor agents follow this automatically via [`.cursor/rules/site-theme.mdc`](.cursor/rules/site-theme.mdc) and [`AGENTS.md`](AGENTS.md).
+
 ## Stack
 
 - React 19
