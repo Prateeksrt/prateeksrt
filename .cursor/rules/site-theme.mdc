@@ -1,0 +1,57 @@
+---
+description: Follow the site theme and CSS primitives for all visual work
+alwaysApply: true
+---
+
+# Site theme
+
+All visual work on this site must follow the theme in `@src/theme.css`. That file is the source of truth for color, type, space, shape, motion, and reusable classes.
+
+Do this before adding or restyling any page, section, or component:
+
+1. Read `@src/theme.css`.
+2. Reuse existing tokens and primitives.
+3. Only then write page-specific layout CSS.
+
+## Stack and style approach
+
+- Plain global CSS plus CSS custom properties. Do not add Tailwind, CSS-in-JS, or a UI library.
+- Page layout stays in files like `@src/App.css`. Tokens and shared classes stay in `@src/theme.css`.
+- Fonts (Fraunces + Outfit) are loaded in `@index.html`. Do not swap families.
+- Compose classes in markup the way `@src/App.tsx` already does (`section prose`, `hero__cta btn`, `display rise-in`).
+
+## Use these primitives
+
+| Class | Use for |
+| --- | --- |
+| `.section` | Centered content block |
+| `.prose` | Body copy |
+| `.display` | Fraunces brand heading |
+| `.headline` | Outfit medium subhead |
+| `.lede` | Supporting text |
+| `.btn` | Primary CTA |
+| `.rise-in` | Enter animation; stagger with `--delay` |
+
+Example for a new section:
+
+```html
+<section class="section prose">
+  <h2 class="headline">Title</h2>
+  <p class="lede">Supporting line.</p>
+  <p>Body copy.</p>
+  <a class="btn" href="#next">Continue</a>
+</section>
+```
+
+## Tokens, not one-off values
+
+- Use CSS variables from `:root` in `@src/theme.css` (`--paper`, `--ink`, `--accent`, `--foam`, `--display`, `--sans`, `--space-*`, `--radius`, and the rest).
+- Do not introduce new hex, rgb, font-size, or spacing values when a token already exists.
+- If a new value is truly needed, add a named token to `@src/theme.css` first, then use the variable.
+- Keep the look: paper/ink surfaces, teal accent, foam text on hero, square corners (`--radius: 0`), no drop shadows, 720px layout breakpoint.
+
+## Do not
+
+- Invent a parallel palette, type scale, or button style.
+- Round corners, add shadows, or restyle `.btn` unless the request is explicitly to change the theme.
+- Copy Vite/React scaffold colors (purple/cyan) into the UI.
