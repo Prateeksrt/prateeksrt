@@ -37,11 +37,17 @@ Open the URL shown in the terminal (usually `http://localhost:5173`).
 ├── src/
 │   ├── App.tsx      # Root React component
 │   ├── main.tsx     # App entry point
-│   └── index.css    # Global styles
+│   ├── theme.css    # Colors, type, space, motion, reusable classes
+│   ├── index.css    # Reset and page canvas
+│   └── App.css      # Page layout (hero, about)
 ├── index.html
 ├── vite.config.ts
 └── tsconfig*.json
 ```
+
+## Theme
+
+Visual language lives in [`src/theme.css`](src/theme.css). New pages and sections should use those tokens and classes (`.section`, `.prose`, `.display`, `.headline`, `.lede`, `.btn`, `.rise-in`) instead of introducing new colors or type styles.
 
 ## Stack
 

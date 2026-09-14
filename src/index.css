@@ -1,25 +1,9 @@
-:root {
-  --ink: #132029;
-  --ink-soft: #3d4f5c;
-  --paper: #f3f6f4;
-  --paper-deep: #e4ebe6;
-  --accent: #1a6b5c;
-  --accent-hover: #145247;
-  --hero-veil: linear-gradient(
-    105deg,
-    rgba(10, 22, 28, 0.82) 0%,
-    rgba(10, 22, 28, 0.55) 42%,
-    rgba(10, 22, 28, 0.18) 100%
-  );
-  --display: 'Fraunces', 'Times New Roman', serif;
-  --sans: 'Outfit', 'Segoe UI', sans-serif;
+@import './theme.css';
 
-  font: 18px/1.55 var(--sans);
-  color: var(--ink-soft);
-  background:
-    radial-gradient(ellipse 80% 50% at 10% 0%, #d7e8e2 0%, transparent 55%),
-    radial-gradient(ellipse 60% 40% at 100% 100%, #dce3e8 0%, transparent 50%),
-    var(--paper);
+:root {
+  font: var(--font-size-body) / var(--leading-body) var(--sans);
+  color: var(--text);
+  background: var(--page-wash);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -34,7 +18,7 @@
 
 body {
   margin: 0;
-  min-width: 320px;
+  min-width: var(--page-min);
 }
 
 #root {
